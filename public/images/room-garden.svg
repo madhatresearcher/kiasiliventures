@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Garden villa placeholder">
+  <rect width="1200" height="800" fill="#d9c8ab"/>
+  <rect x="85" y="95" width="1030" height="610" rx="24" fill="#f2e8d6"/>
+  <rect x="130" y="150" width="480" height="520" rx="20" fill="#315f49"/>
+  <rect x="640" y="150" width="430" height="240" rx="16" fill="#ca9965"/>
+  <rect x="640" y="420" width="430" height="250" rx="16" fill="#9c754f"/>
+  <circle cx="490" cy="245" r="70" fill="#7aa68f"/>
+  <text x="130" y="735" fill="#43301f" font-size="38" font-family="Georgia, serif">Garden Villa photo slot</text>
+</svg>

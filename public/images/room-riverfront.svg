@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Riverfront room placeholder">
+  <rect width="1200" height="800" fill="#d8c29f"/>
+  <rect x="70" y="90" width="1060" height="620" rx="24" fill="#f0e2c9"/>
+  <rect x="120" y="150" width="560" height="380" rx="18" fill="#2d5c4f"/>
+  <rect x="740" y="150" width="320" height="170" rx="14" fill="#8f6a46"/>
+  <rect x="740" y="350" width="320" height="180" rx="14" fill="#c28d5b"/>
+  <rect x="120" y="560" width="940" height="90" rx="16" fill="#b48759"/>
+  <text x="120" y="705" fill="#41301f" font-size="38" font-family="Georgia, serif">Riverfront Suite photo slot</text>
+</svg>
