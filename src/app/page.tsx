@@ -1,4 +1,4 @@
-import Image from "next/image";
+/* eslint-disable @next/next/no-img-element */
 
 const logoSrc = encodeURI("/images/Kiasili Ventures Logo.png");
 
@@ -15,6 +15,7 @@ const ventures = [
     category: "Hospitality",
     description:
       "A premium resort offering comfortable accommodation, memorable experiences, and exceptional service.",
+    href: "https://mubendecountryresort.mubendecountryresort.workers.dev/",
     image:
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1600&q=80",
   },
@@ -23,6 +24,7 @@ const ventures = [
     category: "Restaurant & Dining",
     description:
       "Bold flavours, expertly prepared meals, and a welcoming atmosphere for every occasion.",
+    href: "https://firestonesmokehouse.com/",
     image:
       "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1600&q=80",
   },
@@ -31,6 +33,7 @@ const ventures = [
     category: "Bakery & Confectionery",
     description:
       "Fresh cakes, pastries, and baked goods crafted with care and quality ingredients.",
+    href: "https://kirabakery.com/",
     image:
       "https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=1600&q=80",
   },
@@ -120,14 +123,7 @@ export default function Home() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8 lg:px-12">
           <a href="#home" className="flex items-center gap-3" aria-label="Kiasili Ventures home">
             <span className="relative h-14 w-14 overflow-hidden border border-white/10 bg-[#211B14] shadow-[0_10px_24px_rgba(0,0,0,0.18)] sm:h-16 sm:w-16">
-              <Image
-                src={logoSrc}
-                alt="Kiasili Ventures logo"
-                fill
-                sizes="64px"
-                className="object-cover"
-                priority
-              />
+              <img src={logoSrc} alt="Kiasili Ventures logo" className="h-full w-full object-cover" />
             </span>
             <span className="hidden text-[11px] font-semibold tracking-[0.34em] text-white/[0.95] sm:block">
               KIASILI VENTURES
@@ -161,14 +157,7 @@ export default function Home() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
         <section id="home" className="relative isolate min-h-[100svh] overflow-hidden">
-          <Image
-            src={heroImage}
-            alt="Luxury resort architecture at warm evening light"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-center"
-          />
+          <img src={heroImage} alt="Luxury resort architecture at warm evening light" className="absolute inset-0 h-full w-full object-cover object-center" />
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(17,17,17,0.25)_0%,rgba(17,17,17,0.46)_46%,rgba(17,17,17,0.72)_100%)]" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(181,139,71,0.18),transparent_42%),radial-gradient(circle_at_bottom_right,rgba(0,0,0,0.28),transparent_35%)]" />
 
@@ -212,17 +201,18 @@ export default function Home() {
 
             <div className="mt-12 grid gap-6 lg:grid-cols-3">
               {ventures.map((venture) => (
-                <article
+                <a
                   key={venture.name}
-                  className="group overflow-hidden bg-white shadow-[0_18px_50px_rgba(17,17,17,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(17,17,17,0.1)]"
+                  href={venture.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group block overflow-hidden bg-white shadow-[0_18px_50px_rgba(17,17,17,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(17,17,17,0.1)]"
                 >
                   <div className="relative h-[320px] overflow-hidden">
-                    <Image
+                    <img
                       src={venture.image}
                       alt={venture.name}
-                      fill
-                      sizes="(max-width: 1024px) 100vw, 33vw"
-                      className="object-cover transition duration-700 group-hover:scale-[1.03]"
+                      className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.03]"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/[0.26] via-black/[0.06] to-transparent" />
                   </div>
@@ -232,15 +222,12 @@ export default function Home() {
                     </p>
                     <h3 className="font-serif text-3xl leading-tight text-[#111111]">{venture.name}</h3>
                     <p className="text-sm leading-7 text-[#666666]">{venture.description}</p>
-                    <a
-                      href="#contact"
-                      className="inline-flex items-center gap-2 text-sm font-medium text-[#111111] transition hover:text-[#B58B47]"
-                    >
+                    <span className="inline-flex items-center gap-2 text-sm font-medium text-[#111111] transition group-hover:text-[#B58B47]">
                       Learn More
                       <span aria-hidden="true">-&gt;</span>
-                    </a>
+                    </span>
                   </div>
-                </article>
+                </a>
               ))}
             </div>
           </div>
@@ -260,12 +247,10 @@ export default function Home() {
             </div>
 
             <div className="relative min-h-[420px] overflow-hidden bg-[#EDE7DF] shadow-[0_18px_50px_rgba(17,17,17,0.08)]">
-              <Image
+              <img
                 src={aboutImage}
                 alt="Professional hospitality and business team"
-                fill
-                sizes="(max-width: 1024px) 100vw, 45vw"
-                className="object-cover object-center"
+                className="h-full w-full object-cover object-center"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-black/[0.12] via-transparent to-transparent" />
             </div>
@@ -341,13 +326,7 @@ export default function Home() {
           <div>
             <div className="flex items-center gap-4">
               <span className="relative h-16 w-16 overflow-hidden border border-white/10 bg-[#211B14]">
-                <Image
-                  src={logoSrc}
-                  alt="Kiasili Ventures logo"
-                  fill
-                  sizes="64px"
-                  className="object-cover"
-                />
+                <img src={logoSrc} alt="Kiasili Ventures logo" className="h-full w-full object-cover" />
               </span>
               <p className="text-sm font-semibold tracking-[0.3em] text-white">KIASILI VENTURES</p>
             </div>
