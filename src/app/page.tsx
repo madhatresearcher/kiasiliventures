@@ -20,8 +20,8 @@ const ventures = [
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1600&q=80",
   },
   {
-    name: "Firestone Smokehouse",
-    category: "Restaurant & Dining",
+    name: "Firestone Country Smokehouse",
+    category: "Pick & Go",
     description:
       "Bold flavours, expertly prepared meals, and a welcoming atmosphere for every occasion.",
     href: "https://firestonesmokehouse.com/",
