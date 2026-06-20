@@ -1,9 +1,15 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+const siteUrl = "https://kiasili-ventures.com";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Kiasili Ventures",
   description: "Kiasili Ventures develops and operates hospitality, dining, and bakery businesses in Uganda.",
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: [
       { url: "/favicon-v3.ico", type: "image/x-icon" },
