@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   description: "Kiasili Ventures develops and operates hospitality, dining, and bakery businesses in Uganda.",
   icons: {
     icon: [
-      { url: "/favicon.ico" },
-      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+      { url: "/favicon-v3.ico", type: "image/x-icon" },
+      { url: "/icon-v3.png", type: "image/png", sizes: "512x512" },
     ],
-    shortcut: "/favicon.ico",
-    apple: "/apple-icon.png",
+    shortcut: "/favicon-v3.ico",
+    apple: "/apple-icon-v3.png",
   },
   openGraph: {
     title: "Kiasili Ventures",
