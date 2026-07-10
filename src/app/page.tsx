@@ -73,6 +73,18 @@ const heroImage =
 const aboutImage =
   "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1800&q=80";
 
+function unsplashImageUrl(source: string, width: number): string {
+  const url = new URL(source);
+  url.searchParams.set("auto", "format");
+  url.searchParams.set("fit", "crop");
+  url.searchParams.set("w", String(width));
+  url.searchParams.set("q", "72");
+  return url.toString();
+}
+
+function unsplashImageSrcSet(source: string, widths: number[]): string {
+  return widths.map((width) => `${unsplashImageUrl(source, width)} ${width}w`).join(", ");
+}
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -157,7 +169,15 @@ export default function Home() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
         <section id="home" className="relative isolate min-h-[100svh] overflow-hidden">
-          <img src={heroImage} alt="Luxury resort architecture at warm evening light" className="absolute inset-0 h-full w-full object-cover object-center" />
+          <img
+            src={unsplashImageUrl(heroImage, 1600)}
+            srcSet={unsplashImageSrcSet(heroImage, [640, 960, 1280, 1600, 1920])}
+            sizes="100vw"
+            alt="Luxury resort architecture at warm evening light"
+            className="absolute inset-0 h-full w-full object-cover object-center"
+            fetchPriority="high"
+            decoding="async"
+          />
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(17,17,17,0.25)_0%,rgba(17,17,17,0.46)_46%,rgba(17,17,17,0.72)_100%)]" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(181,139,71,0.18),transparent_42%),radial-gradient(circle_at_bottom_right,rgba(0,0,0,0.28),transparent_35%)]" />
 
@@ -210,9 +230,13 @@ export default function Home() {
                 >
                   <div className="relative h-[320px] overflow-hidden">
                     <img
-                      src={venture.image}
+                      src={unsplashImageUrl(venture.image, 768)}
+                      srcSet={unsplashImageSrcSet(venture.image, [480, 768, 1024])}
+                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                       alt={venture.name}
                       className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.03]"
+                      loading="lazy"
+                      decoding="async"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/[0.26] via-black/[0.06] to-transparent" />
                   </div>
@@ -248,9 +272,13 @@ export default function Home() {
 
             <div className="relative min-h-[420px] overflow-hidden bg-[#EDE7DF] shadow-[0_18px_50px_rgba(17,17,17,0.08)]">
               <img
-                src={aboutImage}
+                src={unsplashImageUrl(aboutImage, 960)}
+                srcSet={unsplashImageSrcSet(aboutImage, [640, 960, 1280])}
+                sizes="(min-width: 1024px) 45vw, 100vw"
                 alt="Professional hospitality and business team"
                 className="h-full w-full object-cover object-center"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-black/[0.12] via-transparent to-transparent" />
             </div>
