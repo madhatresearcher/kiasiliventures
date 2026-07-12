@@ -21,7 +21,7 @@ const ventures = [
   },
   {
     name: "Firestone Country Smokehouse",
-    category: "Pick & Go",
+    category: "Travel, Pick & Go",
     description:
       "Bold flavours, expertly prepared meals, and a welcoming atmosphere for every occasion.",
     href: "https://firestonesmokehouse.com/",
@@ -30,7 +30,7 @@ const ventures = [
   },
   {
     name: "Kira Bakery",
-    category: "Bakery & Confectionery",
+    category: "Bread and Pastries",
     description:
       "Fresh cakes, pastries, and baked goods crafted with care and quality ingredients.",
     href: "https://kirabakery.com/",
@@ -41,24 +41,24 @@ const ventures = [
 
 const values = [
   {
-    title: "Quality",
-    description: "We keep standards high in every experience, service, and product we operate.",
-    icon: QualityIcon,
+    title: "Sustainability",
+    description: "Prioritize eco-friendly practices to protect the environment.",
+    icon: GrowthIcon,
   },
   {
-    title: "Community",
-    description: "We build businesses that create value for guests, teams, and the people around us.",
-    icon: CommunityIcon,
-  },
-  {
-    title: "Innovation",
-    description: "We refine what we do with care, discipline, and a practical eye for improvement.",
+    title: "Cultural Integrity",
+    description: "Showcase and respect the rich cultural heritage of Uganda.",
     icon: InnovationIcon,
   },
   {
-    title: "Growth",
-    description: "We develop sustainable ventures designed to endure and expand with purpose.",
-    icon: GrowthIcon,
+    title: "Community Support",
+    description: "Empower and benefit local communities through tourism.",
+    icon: CommunityIcon,
+  },
+  {
+    title: "Quality Service",
+    description: "Deliver exceptional and memorable experiences to guests.",
+    icon: QualityIcon,
   },
 ];
 
@@ -184,7 +184,7 @@ export default function Home() {
           <div className="relative mx-auto flex min-h-[100svh] max-w-7xl items-end px-5 pb-16 pt-32 sm:px-8 lg:px-12 lg:pb-20">
             <div className="max-w-4xl">
               <p className="text-[11px] font-medium uppercase tracking-[0.32em] text-white/[0.75]">
-                Hospitality, dining, and food production
+                Hospitality, Heritage and Culture
               </p>
               <h1 className="mt-5 max-w-3xl font-serif text-5xl leading-[0.98] text-white sm:text-6xl lg:text-7xl">
                 Building and Operating Businesses That Serve Our Communities
