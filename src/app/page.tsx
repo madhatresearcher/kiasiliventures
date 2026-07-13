@@ -63,8 +63,7 @@ const values = [
 ];
 
 const contactDetails = [
-  { label: "Phone", value: "+256 700 000 000", href: "tel:+256700000000" },
-  { label: "Email", value: "hello@kiasiliventures.com", href: "mailto:hello@kiasiliventures.com" },
+  { label: "Email", value: "kiasiliventures@gmail.com", href: "mailto:kiasiliventures@gmail.com" },
   { label: "Location", value: "Uganda", href: "https://www.google.com/maps/search/Uganda" },
 ];
 
@@ -184,13 +183,13 @@ export default function Home() {
           <div className="relative mx-auto flex min-h-[100svh] max-w-7xl items-end px-5 pb-16 pt-32 sm:px-8 lg:px-12 lg:pb-20">
             <div className="max-w-4xl">
               <p className="text-[11px] font-medium uppercase tracking-[0.32em] text-white/[0.75]">
-                Hospitality, Heritage and Culture
+                SUSTAINABILITY, CULTURAL HERITAGE AND CUMMUNITY EMPOWERMENT
               </p>
               <h1 className="mt-5 max-w-3xl font-serif text-5xl leading-[0.98] text-white sm:text-6xl lg:text-7xl">
-                Building and Operating Businesses That Serve Our Communities
+                Where Exceptional Hospitality Creates Lasting Impact
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-7 text-white/[0.82] sm:text-lg">
-                Kiasili Ventures develops and operates businesses across hospitality, dining, and food production.
+                Every destination and experience reflects our commitment to Ugandan heritage, thriving communities, and exceptional hospitality.
               </p>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                 <a
@@ -324,7 +323,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="mt-10 grid gap-4 lg:grid-cols-[1fr_1fr_1fr_auto]">
+            <div className="mt-10 grid gap-4 lg:grid-cols-[1fr_1fr_auto]">
               {contactDetails.map((detail) => (
                 <a
                   key={detail.label}
@@ -339,7 +338,7 @@ export default function Home() {
               ))}
 
               <a
-                href="mailto:hello@kiasiliventures.com"
+                href="mailto:kiasiliventures@gmail.com"
                 className="inline-flex items-center justify-center rounded-full bg-[#111111] px-7 py-4 text-sm font-medium text-white transition hover:bg-[#1f1f1f]"
               >
                 Contact Us
@@ -375,8 +374,8 @@ export default function Home() {
             <a href="tel:+256700000000" className="transition hover:text-white">
               +256 700 000 000
             </a>
-            <a href="mailto:hello@kiasiliventures.com" className="transition hover:text-white">
-              hello@kiasiliventures.com
+            <a href="mailto:kiasiliventures@gmail.com" className="transition hover:text-white">
+              kiasiliventures@gmail.com
             </a>
             <p>Uganda</p>
           </div>
